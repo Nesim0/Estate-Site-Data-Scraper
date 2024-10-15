@@ -25,7 +25,7 @@ for i in links:
     browser.get(i)
     try:
         time.sleep(2)
-        browser.fullscreen_window()
+        browser.fullscreen_window() #Since I can't click the accept cookie button, I make it full screen, otherwise I can't click the see more button!
         price = browser.find_element(By.CSS_SELECTOR,".R-RKDB").text
         locaiton = browser.find_element(By.XPATH,"//*[@id='harita']/div/div[2]/div/div[1]/p").text
         
